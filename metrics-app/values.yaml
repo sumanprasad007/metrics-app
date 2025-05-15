@@ -24,3 +24,6 @@ serviceAccount:
 
 ingress:
   enabled: false  # or true, depending on whether you want ingress
+
+autoscaling:
+  enabled: false  # or true, depending on what you need
