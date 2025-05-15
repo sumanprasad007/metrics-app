@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: metrics-app-ingress
 spec:
+  ingressClassName: nginx
   rules:
   - host: localhost
     http:
@@ -14,4 +15,3 @@ spec:
             name: metrics-app
             port:
               number: 8080
-
