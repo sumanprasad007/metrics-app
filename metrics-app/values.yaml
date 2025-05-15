@@ -16,3 +16,8 @@ env:
     secretKeyRef:
       name: app-secret
       key: PASSWORD
+
+serviceAccount:
+  create: true
+  annotations: {}
+  automount: true
