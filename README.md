@@ -208,21 +208,16 @@ http://localhost/counter
 **Could you suggest or implement a fix if appropriate?**
 
 2. Optimize the Application Code:
-```
-Avoid using global variables to prevent race conditions in a multi-threaded environment.
+- Avoid using global variables to prevent race conditions in a multi-threaded environment.
 Ensure that asynchronous operations are truly non-blocking and do not introduce delays.
-```
 
 3. Use a Production WSGI Server:
-```
-Replace Flask's built-in server with a production-ready WSGI server like Gunicorn or uWSGI.
+- Replace Flask's built-in server with a production-ready WSGI server like Gunicorn or uWSGI.
 Configure the WSGI server to handle multiple workers and threads to improve performance and scalability.
-```
+
 4. Resource Management:
-```
-Monitor and manage resource usage (CPU, memory, disk I/O) to prevent resource exhaustion.
+- Monitor and manage resource usage (CPU, memory, disk I/O) to prevent resource exhaustion.
 Use tools like cgroups, Docker, or Kubernetes to limit and allocate resources effectively.
-```
 
 **Best Practices for Root Cause Analysis**
 1. Code Review and Analysis:
