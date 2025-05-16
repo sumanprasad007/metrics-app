@@ -52,12 +52,17 @@ serviceAccount:
 Install KIND, Follow the KIND installation guide: https://kind.sigs.k8s.io/docs/user/ingress#create-cluster
 
 ### Create a KIND Cluster
+```
 kind create cluster --name metrics-app --config kind-config.yaml 
+```
 
 ### Install kubectl on system
 Follow the link to install kubectl. Link: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
-validate using: kubectl version
+validate using: 
+``` 
+kubectl version
+```
 
 ### Securely Pass the Secret
 
@@ -78,9 +83,9 @@ kubectl get pods -n argocd
 
 ### Configure ArgoCD
 ```
-kubectl port-forward svc/argocd-server -n argocd 8080:443
+kubectl port-forward svc/argocd-server -n argocd 8081:443
 
-# Access the ArgoCD UI at https://localhost:8080 and log in with the default username admin. Get the password using:
+# Access the ArgoCD UI at https://localhost:8081 and log in with the default username admin. Get the password using:
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```

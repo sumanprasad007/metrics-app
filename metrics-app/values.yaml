@@ -7,9 +7,6 @@ service:
   type: ClusterIP
   port: 8080
 
-# env:
-#   PASSWORD: "MYPASSWORD"
-
 env:
 - name: PASSWORD
   valueFrom:
