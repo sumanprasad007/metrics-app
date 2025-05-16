@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: metrics-app-ingress
 spec:
-  ingressClassName: nginx
+  # ingressClassName: nginx
   rules:
   - host: localhost
     http:
