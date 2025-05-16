@@ -207,12 +207,32 @@ http://localhost/counter
 
 **Could you suggest or implement a fix if appropriate?**
 
-2. Optimize the Application Code
+2. Optimize the Application Code:
+```
+Avoid using global variables to prevent race conditions in a multi-threaded environment.
+Ensure that asynchronous operations are truly non-blocking and do not introduce delays.
+```
 
-- Avoid Global Variables: Using global variables like counter can lead to race conditions in a multi-threaded environment. 
-- Asynchronous Operations: Ensure that asynchronous operations, such as metrics.trigger_background_collection(), are truly non-blocking and do not introduce delays.
+3. Use a Production WSGI Server:
+```
+Replace Flask's built-in server with a production-ready WSGI server like Gunicorn or uWSGI.
+Configure the WSGI server to handle multiple workers and threads to improve performance and scalability.
+```
+4. Resource Management:
+```
+Monitor and manage resource usage (CPU, memory, disk I/O) to prevent resource exhaustion.
+Use tools like cgroups, Docker, or Kubernetes to limit and allocate resources effectively.
+```
 
-3. Use a Production WSGI Server
+**Best Practices for Root Cause Analysis**
+1. Code Review and Analysis:
+```
+Conduct thorough code reviews to identify potential issues in the codebase.
+Use static analysis tools to detect common coding errors, security vulnerabilities, and performance issues
+```
 
-- Gunicorn or uWSGI: Flask's built-in server is not suitable for running load. For a production-ready WSGI server like Gunicorn or uWSGI to serve your application.
-
+2. Load Testing:
+```
+Perform load testing to simulate high traffic and identify performance bottlenecks.
+Use tools like JMeter, Gatling, or Locust to generate load and monitor the application's response.
+```
