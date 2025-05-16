@@ -226,13 +226,9 @@ Use tools like cgroups, Docker, or Kubernetes to limit and allocate resources ef
 
 **Best Practices for Root Cause Analysis**
 1. Code Review and Analysis:
-```
-Conduct thorough code reviews to identify potential issues in the codebase.
+- Conduct thorough code reviews to identify potential issues in the codebase.
 Use static analysis tools to detect common coding errors, security vulnerabilities, and performance issues
-```
 
 2. Load Testing:
-```
-Perform load testing to simulate high traffic and identify performance bottlenecks.
-Use tools like JMeter, Gatling, or Locust to generate load and monitor the application's response.
-```
+- Perform load testing to simulate high traffic and identify performance bottlenecks.
+Use tools like JMeter, or Locust to generate load and monitor the application's response.
