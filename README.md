@@ -12,7 +12,13 @@ Deploy a containerized app that exposes a `/counter` endpoint using Helm, ArgoCD
 
 ## Step 1: Helm Chart Creation
 
-### Initialize Helm Chart
+### clone the repo: 
+```
+git clone https://github.com/sumanprasad007/metrics-app.git
+cd metrics-app
+```
+
+### or Initialize Helm Chart
 ```
 helm create metrics-app
 ```
@@ -82,6 +88,7 @@ kubectl get pods -n argocd
 ```
 
 ### Configure ArgoCD
+![alt text](image-7.png)
 ```
 kubectl port-forward svc/argocd-server -n argocd 8081:443
 
@@ -123,8 +130,8 @@ spec:
 ```
 kubectl apply -f argocd-app.yaml
 ```
+![alt text](image-6.png)
 
-![alt text](image-1.png)
 
 ## Step 4: Ingress Setup
 
